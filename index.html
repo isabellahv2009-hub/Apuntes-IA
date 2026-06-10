@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia IA - Aprende Inteligencia Artificial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-main">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>Academia IA</h1>
+                </div>
+                <p class="subtitle">Aprende Inteligencia Artificial de forma interactiva</p>
+            </div>
+        </header>
+
+        <!-- NAVEGACIÓN DE UNIDADES -->
+        <nav class="nav-units">
+            <button class="unit-btn active" data-unit="2">
+                <span class="unit-icon">📚</span>
+                <span class="unit-text">Unidad 2<br><small>Fundamentos</small></span>
+            </button>
+            <button class="unit-btn" data-unit="3">
+                <span class="unit-icon">🤖</span>
+                <span class="unit-text">Unidad 3<br><small>Algoritmos</small></span>
+            </button>
+            <button class="unit-btn" data-unit="4">
+                <span class="unit-icon">🧠</span>
+                <span class="unit-text">Unidad 4<br><small>Machine Learning</small></span>
+            </button>
+            <button class="unit-btn" data-unit="5">
+                <span class="unit-icon">🔗</span>
+                <span class="unit-text">Unidad 5<br><small>Redes Neuronales</small></span>
+            </button>
+            <button class="unit-btn" data-unit="6">
+                <span class="unit-icon">🌍</span>
+                <span class="unit-text">Unidad 6<br><small>Aplicaciones</small></span>
+            </button>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="content">
+            <!-- UNIDAD 2 -->
+            <section class="unit-content active" id="unit-2">
+                <h2 class="unit-title">Unidad 2: Fundamentos de la Inteligencia Artificial</h2>
+                
+                <!-- TEMA 1 -->
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-lightbulb"></i> ¿Qué es la Inteligencia Artificial?</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>La <strong>Inteligencia Artificial (IA)</strong> es la capacidad de las máquinas para realizar tareas que normalmente requieren inteligencia humana. Esto incluye:</p>
+                            <ul>
+                                <li>Aprender de la experiencia</li>
+                                <li>Reconocer patrones</li>
+                                <li>Entender lenguaje</li>
+                                <li>Resolver problemas</li>
+                                <li>Tomar decisiones</li>
+                            </ul>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Spotify:</strong> La app de música usa IA para recomendarte canciones que probablemente te gustarán basándose en lo que has escuchado antes.</p>
+                                <p><strong>Gmail:</strong> Detecta automáticamente cuáles emails son spam.</p>
+                                <p><strong>Netflix:</strong> Sugiere películas según tus gustos.</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Pregunta:</strong> ¿Cuál de estas tareas requiere Inteligencia Artificial?</p>
+                                <div class="options">
+                                    <label><input type="radio" name="ex1"> a) Apagar una luz</label>
+                                    <label><input type="radio" name="ex1"> b) Reconocer tu cara en una foto</label>
+                                    <label><input type="radio" name="ex1"> c) Sumar 2 + 2</label>
+                                </div>
+                                <button class="check-btn" onclick="checkAnswer1()">Verificar Respuesta</button>
+                                <div class="answer-feedback" id="feedback1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 2 -->
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-history"></i> Evolución de la IA</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>La IA ha evolucionado a través de diferentes etapas:</p>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="year">1950s</span>
+                                    <span class="event">Nacimiento de la IA</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="year">1970-80s</span>
+                                    <span class="event">Sistemas Expertos</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="year">1990s</span>
+                                    <span class="event">Internet y Big Data</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="year">2010s</span>
+                                    <span class="event">Deep Learning</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="year">2020s</span>
+                                    <span class="event">IA Generativa (ChatGPT)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>1997:</strong> IBM Deep Blue derrota al campeón mundial de ajedrez Garry Kasparov.</p>
+                                <p><strong>2016:</strong> Google AlphaGo vence al campeón de Go, un juego más complejo que el ajedrez.</p>
+                                <p><strong>2022:</strong> ChatGPT revoluciona la conversación con máquinas.</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Pregunta:</strong> ¿En qué década comenzó formalmente la Inteligencia Artificial?</p>
+                                <div class="options">
+                                    <label><input type="radio" name="ex2"> a) 1920s</label>
+                                    <label><input type="radio" name="ex2"> b) 1950s</label>
+                                    <label><input type="radio" name="ex2"> c) 1980s</label>
+                                </div>
+                                <button class="check-btn" onclick="checkAnswer2()">Verificar Respuesta</button>
+                                <div class="answer-feedback" id="feedback2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 3 -->
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-sitemap"></i> Tipos de IA</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>Existen diferentes niveles de IA según su capacidad:</p>
+                            <div class="ai-types">
+                                <div class="type-card">
+                                    <h5>IA Débil (Narrow AI)</h5>
+                                    <p>Realiza tareas específicas. Ejemplo: un chatbot que solo responde preguntas sobre clima.</p>
+                                </div>
+                                <div class="type-card">
+                                    <h5>IA Fuerte (General AI)</h5>
+                                    <p>Puede realizar cualquier tarea intelectual. Aún no existe en la realidad.</p>
+                                </div>
+                                <div class="type-card">
+                                    <h5>IA Super (ASI)</h5>
+                                    <p>Sería más inteligente que los humanos. Teórica y futura.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>IA Débil:</strong> Tu teléfono reconoce tu voz para desbloquear.</p>
+                                <p><strong>IA Débil Avanzada:</strong> ChatGPT puede escribir, traducir, programar, etc.</p>
+                                <p><strong>No existe aún:</strong> Un robot que sea tan inteligente como un humano en todas las áreas.</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Pregunta:</strong> Siri (asistente de Apple) es un ejemplo de:</p>
+                                <div class="options">
+                                    <label><input type="radio" name="ex3"> a) IA Fuerte</label>
+                                    <label><input type="radio" name="ex3"> b) IA Débil</label>
+                                    <label><input type="radio" name="ex3"> c) IA Super</label>
+                                </div>
+                                <button class="check-btn" onclick="checkAnswer3()">Verificar Respuesta</button>
+                                <div class="answer-feedback" id="feedback3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIDAD 3 -->
+            <section class="unit-content" id="unit-3">
+                <h2 class="unit-title">Unidad 3: Algoritmos y Lógica</h2>
+                
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-code"></i> ¿Qué es un Algoritmo?</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>Un <strong>algoritmo</strong> es un conjunto de pasos ordenados para resolver un problema. Es como una receta de cocina pero para máquinas.</p>
+                            <div class="algo-box">
+                                <p><strong>Características:</strong></p>
+                                <ul>
+                                    <li>✓ Tiene un inicio y un fin claro</li>
+                                    <li>✓ Los pasos son ordenados</li>
+                                    <li>✓ Es preciso y sin ambigüedad</li>
+                                    <li>✓ Debe funcionar siempre con la entrada correcta</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Algoritmo para hacer un sándwich:</strong></p>
+                                <ol>
+                                    <li>1. Tomar dos rebanadas de pan</li>
+                                    <li>2. Abrir la mantequilla</li>
+                                    <li>3. Untar mantequilla en una rebanada</li>
+                                    <li>4. Añadir ingredientes (jamón, queso)</li>
+                                    <li>5. Poner la otra rebanada encima</li>
+                                    <li>6. Cortar en diagonal</li>
+                                    <li>7. Servir</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Reto:</strong> Ordena estos pasos para cepillarse los dientes:</p>
+                                <div id="sortable-list" class="sortable-list">
+                                    <div class="sort-item" draggable="true">1. Llenar el vaso con agua</div>
+                                    <div class="sort-item" draggable="true">2. Poner pasta en el cepillo</div>
+                                    <div class="sort-item" draggable="true">3. Cepillarse los dientes</div>
+                                    <div class="sort-item" draggable="true">4. Enjuagarse la boca</div>
+                                    <div class="sort-item" draggable="true">5. Tomar el cepillo</div>
+                                </div>
+                                <button class="check-btn" onclick="checkAlgoOrder()">Verificar Orden</button>
+                                <div class="answer-feedback" id="feedback-algo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-code-branch"></i> Lógica y Condicionales</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>Los algoritmos usan <strong>condicionales</strong> (SI-ENTONCES) para tomar decisiones:</p>
+                            <div class="logic-box">
+                                <p><strong>Estructura:</strong></p>
+                                <code>SI (condición) ENTONCES hacer esto SINO hacer esto otro</code>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>En un videojuego:</strong></p>
+                                <code>SI el jugador presiona saltar ENTONCES mover el personaje hacia arriba</code>
+                                <p><strong>En una app:</strong></p>
+                                <code>SI la temperatura es menor a 0°C ENTONCES mostrar aviso de hielo en la carretera</code>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Pregunta:</strong> ¿Cuál es la salida del siguiente algoritmo si el número es 10?</p>
+                                <code>SI número > 5 ENTONCES mostrar "Es mayor" SINO mostrar "Es menor"</code>
+                                <div class="options">
+                                    <label><input type="radio" name="ex-logic"> a) Es mayor</label>
+                                    <label><input type="radio" name="ex-logic"> b) Es menor</label>
+                                    <label><input type="radio" name="ex-logic"> c) No hace nada</label>
+                                </div>
+                                <button class="check-btn" onclick="checkLogic()">Verificar Respuesta</button>
+                                <div class="answer-feedback" id="feedback-logic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIDAD 4 -->
+            <section class="unit-content" id="unit-4">
+                <h2 class="unit-title">Unidad 4: Aprendizaje Automático (Machine Learning)</h2>
+                
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-graduation-cap"></i> ¿Qué es Machine Learning?</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p><strong>Machine Learning (ML)</strong> es la capacidad de una máquina para aprender de datos sin ser programada explícitamente.</p>
+                            <div class="ml-comparison">
+                                <div class="comparison-item">
+                                    <h5>Programación Tradicional</h5>
+                                    <p>Programador → Código → Computadora → Resultado</p>
+                                </div>
+                                <div class="comparison-item">
+                                    <h5>Machine Learning</h5>
+                                    <p>Datos → Máquina Aprende → Modelo → Predicciones</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Clasificación de emails:</strong></p>
+                                <p>En lugar de programar reglas para cada spam, le mostramos a la máquina 1 millón de emails (algunos spam, otros no). La máquina aprende patrones y puede identificar spam automáticamente.</p>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Interactivo:</strong> Clasifica las frutas</p>
+                                <div class="ml-exercise">
+                                    <div class="fruit-item">
+                                        <span>🍎 Rojo, redondo, pequeño</span>
+                                        <select onchange="updateML()">
+                                            <option>Selecciona...</option>
+                                            <option>Manzana</option>
+                                            <option>Naranja</option>
+                                            <option>Plátano</option>
+                                        </select>
+                                    </div>
+                                    <div class="fruit-item">
+                                        <span>🍌 Amarillo, alargado, grande</span>
+                                        <select onchange="updateML()">
+                                            <option>Selecciona...</option>
+                                            <option>Manzana</option>
+                                            <option>Naranja</option>
+                                            <option>Plátano</option>
+                                        </select>
+                                    </div>
+                                    <div class="fruit-item">
+                                        <span>🍊 Naranja, redondo, mediano</span>
+                                        <select onchange="updateML()">
+                                            <option>Selecciona...</option>
+                                            <option>Manzana</option>
+                                            <option>Naranja</option>
+                                            <option>Plátano</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button class="check-btn" onclick="checkML()">Verificar Clasificaciones</button>
+                                <div class="answer-feedback" id="feedback-ml"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-chart-bar"></i> Tipos de Aprendizaje</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>Existen tres tipos principales de aprendizaje automático:</p>
+                            <div class="learning-types">
+                                <div class="learning-card">
+                                    <h5>Aprendizaje Supervisado</h5>
+                                    <p>La máquina aprende con datos etiquetados. Ejemplo: emails (spam/no spam).</p>
+                                </div>
+                                <div class="learning-card">
+                                    <h5>Aprendizaje No Supervisado</h5>
+                                    <p>La máquina agrupa datos por similitud. Ejemplo: agrupar clientes por comportamiento.</p>
+                                </div>
+                                <div class="learning-card">
+                                    <h5>Aprendizaje por Refuerzo</h5>
+                                    <p>La máquina aprende mediante recompensas y castigos. Ejemplo: videojuegos con IA.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Supervisado:</strong> Reconocimiento facial (fotos etiquetadas con nombres).</p>
+                                <p><strong>No Supervisado:</strong> Netflix agrupa películas por géneros automáticamente.</p>
+                                <p><strong>Refuerzo:</strong> AlphaGo aprende a jugar Go mediante millones de partidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIDAD 5 -->
+            <section class="unit-content" id="unit-5">
+                <h2 class="unit-title">Unidad 5: Redes Neuronales</h2>
+                
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-brain"></i> Introducción a las Redes Neuronales</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>Una <strong>red neuronal artificial</strong> imita cómo funciona el cerebro humano. Está inspirada en las neuronas biológicas.</p>
+                            <div class="neuron-box">
+                                <p><strong>¿Cómo funciona una neurona biológica?</strong></p>
+                                <ul>
+                                    <li>Recibe señales de otras neuronas</li>
+                                    <li>Procesa la información</li>
+                                    <li>Envía una señal a otras neuronas si la activación es suficiente</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Redes Neuronales en Acción:</strong></p>
+                                <ul>
+                                    <li>🎨 Generador de imágenes (DALL-E, Midjourney)</li>
+                                    <li>🎮 NPCs en videojuegos con comportamiento inteligente</li>
+                                    <li>🚗 Autos autónomos (perciben el entorno)</li>
+                                    <li>🗣️ Traducción automática (Google Translate)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Pregunta:</strong> ¿En cuál de estas aplicaciones se usan redes neuronales?</p>
+                                <div class="options">
+                                    <label><input type="radio" name="ex-neuron"> a) Calcular la suma de dos números</label>
+                                    <label><input type="radio" name="ex-neuron"> b) Generar imágenes a partir de texto (DALL-E)</label>
+                                    <label><input type="radio" name="ex-neuron"> c) Mostrar la hora actual</label>
+                                </div>
+                                <button class="check-btn" onclick="checkNeuron()">Verificar Respuesta</button>
+                                <div class="answer-feedback" id="feedback-neuron"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-network-wired"></i> Deep Learning</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p><strong>Deep Learning (Aprendizaje Profundo)</strong> utiliza redes neuronales con muchas capas.</p>
+                            <div class="deep-learning-box">
+                                <p><strong>Estructura de Capas:</strong></p>
+                                <div class="layers-visualization">
+                                    <div class="layer">Entrada</div>
+                                    <div class="layer">Capas Ocultas</div>
+                                    <div class="layer">Más Capas</div>
+                                    <div class="layer">Salida</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>ChatGPT usa Deep Learning:</strong> Tiene miles de millones de parámetros distribuidos en múltiples capas para entender y generar texto.</p>
+                                <p><strong>Reconocimiento facial:</strong> Múltiples capas analizan características faciales (ojos, nariz, etc.)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UNIDAD 6 -->
+            <section class="unit-content" id="unit-6">
+                <h2 class="unit-title">Unidad 6: Aplicaciones de IA en el Mundo Real</h2>
+                
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-globe"></i> IA en la Vida Cotidiana</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>La IA ya está presente en muchos aspectos de nuestras vidas:</p>
+                            <div class="applications-grid">
+                                <div class="app-card">
+                                    <h5>📱 Smartphones</h5>
+                                    <p>Reconocimiento facial, sugerencias predictivas, autocorrector</p>
+                                </div>
+                                <div class="app-card">
+                                    <h5>🎬 Entretenimiento</h5>
+                                    <p>Recomendaciones de Netflix, Spotify, YouTube</p>
+                                </div>
+                                <div class="app-card">
+                                    <h5>🏥 Medicina</h5>
+                                    <p>Diagnóstico de enfermedades mediante análisis de imágenes</p>
+                                </div>
+                                <div class="app-card">
+                                    <h5>🚗 Transporte</h5>
+                                    <p>Autos autónomos, sistemas de navegación (Google Maps)</p>
+                                </div>
+                                <div class="app-card">
+                                    <h5>🛒 E-commerce</h5>
+                                    <p>Detección de fraude, recomendaciones de productos</p>
+                                </div>
+                                <div class="app-card">
+                                    <h5>💬 Asistentes</h5>
+                                    <p>Alexa, Siri, Google Assistant, ChatGPT</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Un día normal con IA:</strong></p>
+                                <ol>
+                                    <li>Desbloqueas el teléfono con tu cara (reconocimiento facial)</li>
+                                    <li>Spotify sugiere una canción basada en tus gustos</li>
+                                    <li>Instagram muestra posts personalizados</li>
+                                    <li>Gmail detecta un email de spam</li>
+                                    <li>Google Maps sugiere la ruta más rápida</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <h4>✏️ Ejercicio Práctico</h4>
+                            <div class="exercise-box">
+                                <p><strong>Pregunta:</strong> ¿Cuántas veces interactuaste con IA hoy?</p>
+                                <p>Escribe tu respuesta y luego reflexiona: ¿Cuáles fueron esas interacciones?</p>
+                                <textarea id="reflection" placeholder="Escribe aquí..."></textarea>
+                                <button class="check-btn" onclick="saveReflection()">Guardar Reflexión</button>
+                                <div class="answer-feedback" id="feedback-reflection"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-lightbulb"></i> Ética y Responsabilidad en IA</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>Es importante usar la IA de forma responsable y ética:</p>
+                            <div class="ethics-box">
+                                <div class="ethics-item">
+                                    <h5>⚖️ Justicia</h5>
+                                    <p>La IA no debe discriminar por raza, género o edad</p>
+                                </div>
+                                <div class="ethics-item">
+                                    <h5>🔒 Privacidad</h5>
+                                    <p>Proteger los datos personales de los usuarios</p>
+                                </div>
+                                <div class="ethics-item">
+                                    <h5>🤝 Transparencia</h5>
+                                    <p>Las personas deben saber cuándo interactúan con IA</p>
+                                </div>
+                                <div class="ethics-item">
+                                    <h5>📚 Educación</h5>
+                                    <p>Preparar personas para trabajar con IA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Ejemplo del Mundo Real</h4>
+                            <div class="example-box">
+                                <p><strong>Caso de Estudio:</strong> Amazon eliminó su sistema de IA para seleccionar candidatos porque discriminaba a las mujeres.</p>
+                                <p><strong>Lección:</strong> Los datos con los que entrenamos la IA pueden contener sesgos, y debemos ser cuidadosos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tema-card">
+                    <div class="tema-header">
+                        <h3><i class="fas fa-rocket"></i> Futuro de la IA y Oportunidades</h3>
+                        <button class="toggle-btn">Expandir</button>
+                    </div>
+                    <div class="tema-content" style="display: none;">
+                        <div class="explanation">
+                            <h4>📖 Explicación</h4>
+                            <p>La IA seguirá transformando el mundo:</p>
+                            <div class="future-box">
+                                <div class="future-item">
+                                    <h5>🏥 Medicina Personalizada</h5>
+                                    <p>Tratamientos adaptados a cada persona</p>
+                                </div>
+                                <div class="future-item">
+                                    <h5>🌱 Sostenibilidad</h5>
+                                    <p>IA para resolver problemas ambientales</p>
+                                </div>
+                                <div class="future-item">
+                                    <h5>🎓 Educación</h5>
+                                    <p>Tutores personalizados para cada estudiante</p>
+                                </div>
+                                <div class="future-item">
+                                    <h5>💼 Empleos</h5>
+                                    <p>Nuevas profesiones en IA y ciencia de datos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="example">
+                            <h4>💡 Profesiones del Futuro</h4>
+                            <div class="example-box">
+                                <ul>
+                                    <li>🧑‍💻 Ingeniero de IA / Machine Learning</li>
+                                    <li>📊 Científico de Datos</li>
+                                    <li>🔍 Especialista en Ética de IA</li>
+                                    <li>🤖 Ingeniero de Robótica</li>
+                                    <li>🏥 Médico + IA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2024 Academia IA - Plataforma Educativa Interactiva</p>
+            <p>Diseñado para estudiantes de 8º básico hasta 3º de bachillerato</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
